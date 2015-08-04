@@ -47,7 +47,7 @@ def main():
         result_image_path = os.path.join(args.output_dir, "higher_red_hue.jpg")
         cv2.imwrite(result_image_path, higher_red_hue)
 
-    # ...
+    # Merge the images
     full_image = cv2.addWeighted(lower_red_hue, 1.0, higher_red_hue, 1.0, 0.0)
     if args.output_dir:
         result_image_path = os.path.join(args.output_dir, "full_image.jpg")
