@@ -66,7 +66,7 @@ def main():
         cv2.imwrite(result_image_path, image_gray)
     
     # Find circles in the image
-    circles = cv2.HoughCircles(image_gray, 3, 1.2, 100)
+    circles = cv2.HoughCircles(image_gray, cv2.HOUGH_GRADIENT, 1.2, 100)
 
     # If we didn't find circles, the oven status is "OFF"
     if circles is None:
